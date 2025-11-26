@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Tech - Tienda de Tecnología Espacial</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home-page">
+                <i class="bi bi-rocket-takeoff"></i> Galactic Tech
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home-page">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-page">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#cart-page">
+                            <i class="bi bi-cart3"></i> Carrito
+                            <span id="cart-count" class="badge bg-primary cart-badge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main id="main-content">
+        <!-- Página de inicio -->
+        <section id="home-page" class="page active">
+            <header class="hero-section text-center">
+                <div class="container">
+                    <h1 class="display-4">Tecnología para la Exploración Espacial</h1>
+                    <p class="lead">Descubre los productos más avanzados para tus aventuras intergalácticas</p>
+                </div>
+            </header>
+
+            <section class="container">
+                <h2 class="text-center mb-4">Nuestros Productos</h2>
+                <div class="row" id="products-grid">
+                    <!-- Los productos se cargarán dinámicamente -->
+                </div>
+            </section>
+        </section>
+
+        <!-- Página de detalle de producto -->
+        <section id="product-detail-page" class="page">
+            <div class="container py-5">
+                <div class="row" id="product-detail">
+                    <!-- El detalle del producto se cargará dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Página del carrito -->
+        <section id="cart-page" class="page">
+            <div class="container py-5">
+                <h2 class="mb-4">Tu Carrito de Compras</h2>
+                <div id="cart-items">
+                    <!-- Los productos del carrito se cargarán dinámicamente -->
+                </div>
+                <div class="text-end mt-4">
+                    <h4 id="cart-total">Total: $0</h4>
+                    <button class="btn btn-success btn-lg" id="checkout-btn">Finalizar Compra</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de contacto -->
+        <section id="contact-page" class="page">
+            <div class="container py-5">
+                <h2 class="mb-4">Contacto</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Información de Contacto</h4>
+                        <p><i class="bi bi-geo-alt"></i> Estación Espacial Internacional, Órbita Terrestre</p>
+                        <p><i class="bi bi-envelope"></i> contacto@galactictech.com</p>
+                        <p><i class="bi bi-telephone"></i> +1 (555) 123-4567</p>
+                        <h4 class="mt-4">Horario de Atención</h4>
+                        <p>Lunes a Viernes: 9:00 - 18:00 (Tiempo Universal Coordinado)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Galactic Tech</h5>
+                    <p>Tu proveedor de confianza para tecnología espacial desde 2050.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home-page" class="text-light">Inicio</a></li>
+                        <li><a href="#cart-page" class="text-light">Carrito</a></li>
+                        <li><a href="#contact-page" class="text-light">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div>
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2023 Galactic Tech. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Personalizado -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
